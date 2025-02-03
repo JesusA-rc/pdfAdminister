@@ -1,0 +1,86 @@
+.unir_main {
+    display: flex;
+    flex-direction: row; 
+    gap: 2rem; 
+    height: calc(100vh - 3rem); 
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+ 
+.unir_content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto; 
+    height: calc(100vh - 3rem); 
+    max-height: calc(100vh - 3rem);
+}
+
+.text_presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.2rem;
+    padding-top: 2rem;
+}
+
+.unirPdf {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-width: 400px;
+    gap: 1.2rem;
+    background-color: #2c3e50;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem; 
+    margin-left: auto; 
+    overflow-y: auto; 
+    height: calc(100vh - 3rem); 
+    max-height: calc(100vh - 3rem); 
+    text-align: center;
+}
+
+.unirPdf_information{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: aquamarine;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+}
+
+.unirPdf button {
+    margin-top: auto; 
+    width: 100%;
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .unirPdf {
+        max-width: 70%;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        transition: right 0.3s ease;
+        z-index: 100;
+        min-height: 100vh;
+        padding: 1rem;
+    }
+
+    .unirPdf.active {
+        right: 0;
+    }
+
+    .unir_content {
+        max-height: 100vh;
+    }
+
+    .unir_main {
+        height: 100vh; 
+    }
+}

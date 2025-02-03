@@ -1,0 +1,64 @@
+.dividir_range_info{
+    background-color: aquamarine;
+    border-radius: 5px;
+    padding: 20px;
+    color: red;
+}
+
+.dividir_range{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+}
+
+.dividir_options_list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center; 
+    color: white;
+}
+
+.dividir_options_list button {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.dividir_options_list button:hover{
+    background-color: #f0f0f0b6;
+}
+
+.dividir_options_list button.selected {
+    border: 2px dotted red; 
+}
+
+
+.range_list_selected{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.customInput {
+    padding: 10px 15px; 
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.customInput:hover {
+    border-color: #999; 
+  }
+  
+  .customInput:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }

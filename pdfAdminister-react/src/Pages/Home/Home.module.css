@@ -1,0 +1,7 @@
+.Home {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+    height: calc(100vh - 3rem); 
+    overflow: hidden;
+}

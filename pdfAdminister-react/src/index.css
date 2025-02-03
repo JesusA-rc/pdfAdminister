@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(55, 114, 136);
+}
+
+.btn_main{
+  background-color: #FF5722;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn_main.disabled {
+  background-color: gray; 
+  cursor: not-allowed;
+}
+
+.btn_main:hover{
+  background-color: rgb(115, 12, 12)
+}
+
+.main_h5{
+  font-size: 2.5rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  font-weight: bold;
+  color: white;
+}
+
+.main_h5_subtext{
+  font-size: 1.2rem;
+  color: #6fa3ff;
+}
+
+.subtext{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.content_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(100% -420px);
+  max-height: 100%;
+  margin-top: 2rem;
+  gap: 1rem;
+  padding: 0 0.8rem;
+}
+
+.content_wrap_hover {
+  cursor: pointer; 
+  transition: transform 0.3s ease; 
+}
+
+.content_wrap_hover img {
+  transition: transform 0.3s ease; 
+  transform-origin: center; 
+}
+
+.content_wrap_hover:hover img {
+  transform: scale(0.95);
+}
+
+.content_wrap_row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+  border: 1px dotted #ffc93c;
+  border-radius: 5px;
+  padding: 2rem;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.content_wrap_element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid black;
+  width: 12rem;
+  max-width: 100%;
+  height: 20rem; 
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box; 
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.content_wrap_element p {
+  margin: 0; 
+  font-size: 1.2rem; 
+  text-align: center; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: black;
+}
+
+.content_wrap_element canvas {
+  width: 100%;
+  height: auto; 
+  max-height: 80%;
+  min-width: 100%;
+  border: 1px solid gray;
+}
+
+.content_wrap_element img{
+  width: 100%;
+  height: auto; 
+  max-height: 80%;
+  min-width: 100%;
+  border-radius: 5px;
+}
+
+.link{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.text_presentation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1.2rem;
+  padding-top: 2rem;
+}
+
+.delete-button {
+  background-color: #007bff; 
+  color: white; 
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #0056b3;
+  color: red;
+}
+
+.btn_toggle {
+  display: none;
+  position: fixed;
+  top: 0rem; 
+  right: 0rem;
+  background-color:#155263;
+  border-radius: 0 0 5px 5px;
+  color: #ff6f3c;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 101; 
+  transition: right 0.3s ease; 
+}
+
+.dragging {
+  background-color: rgba(0, 0, 0, 0.6); 
+  border: 2px dashed #ccc;
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
+  filter: brightness(0.8); 
+  transition: all 0.3s ease;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center; 
+  gap: 8px;
+  cursor: pointer;
+  user-select: none; 
+}
+
+.checkbox-input {
+  appearance: none; 
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc; 
+  border-radius: 4px;
+  background-color: #fff; 
+  transition: all 0.3s ease;
+  cursor: pointer; 
+}
+
+.checkbox-input:checked {
+  background-color: #007bff; 
+  border-color: #007bff; 
+}
+
+.checkbox-input:checked::after {
+  content: "✔";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .btn_toggle {
+    display: block; 
+  }
+
+  .content_wrap_element {
+    width: 8rem; 
+    height: 18rem;
+    padding: 0.75rem;
+  }
+
+  .content_wrap_row {
+    font-size: 1.5rem;  
+    padding: 0.5rem 0.5rem; 
+    gap: 70px;  
+  }
+
+  .content_wrap_row{
+    gap: 5px;
+  }
+
+  .content_wrap{
+    max-width: 100%;
+  }
+  
+}
