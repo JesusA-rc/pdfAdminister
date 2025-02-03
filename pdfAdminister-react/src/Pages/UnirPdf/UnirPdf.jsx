@@ -28,6 +28,11 @@ const UnirPdf = () => {
     setIsDragging(false); 
   };
 
+  const handleDeleteFile = (index) => {
+    setPdfUrls((prevUrls) => prevUrls.filter((_, i) => i !== index));
+    setPdfFiles((prevFiles) => prevFiles.filter((_, i) => i !== index));;
+  };
+
   return (
     <div className={`${styles.unir_main} ${isDragging ? 'dragging' : ''}`}  onDragLeave={handleDragLeave} 
     onDrop={(e) => {handleDrop(e, setPdfUrls, setPdfFiles); setIsDragging(false)}} onDragOver={(e) => handleDragOver(e,setIsDragging)}>
@@ -47,7 +52,9 @@ const UnirPdf = () => {
             <div className="content_wrap_element" key={index}>
               <p>{file.name}</p>
               <PdfViewer url={file.url} pageNum={1} />
+              <button className="delete-button" onClick={() => handleDeleteFile(index)}>Eliminar</button>
             </div>
+            
           ))}
         </div>
       </div>

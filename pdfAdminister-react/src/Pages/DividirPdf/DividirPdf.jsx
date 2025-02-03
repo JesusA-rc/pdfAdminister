@@ -78,7 +78,7 @@ export const DividirPdf = () => {
         if (typeRange === 0) {
           return (
             <div key={index}>
-              <p>{file.name} - Primera Página</p>
+              <p>{file.name}</p>
               <button className="delete-button" onClick={() => handleDeleteFile(index)}>
                 Eliminar
               </button>
